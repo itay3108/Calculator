@@ -48,4 +48,13 @@ if __name__ == '__main__':
                         valid = true
                         addition(num1, num2)
                     except:
-                        print("Invalid input")
+                        print("Invalid input please try again")
+            case 's':
+                while not valid:
+                    try:
+                        num1 = float(input("enter a number: "))
+                        num2 = float(input("enter a number: "))
+                        valid = true
+                        subtraction(num1, num2)
+                    except:
+                        print("Invalid input please try again")
