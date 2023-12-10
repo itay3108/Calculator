@@ -17,14 +17,19 @@ def multification(num1,num2):
     print(num1*num2,"\n")
 
 
+
 def division(num1,num2):
-    print(num1/num2,"\n")
+    if num2 != 0:
+        print(num1/num2,"\n")
+    else:
+        print("can't divide by zero")
 
 
 def power(num1,num2):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
+    try:
+        print(pow(num1,num2,float),"\n")
+    except:
+        print("Value Error(number too large)")
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -75,9 +80,17 @@ if __name__ == '__main__':
                         num1 = float(input("enter a number: "))
                         num2 = float(input("enter a number: "))
                         valid = true
-                        if num2 != 0:
-                            division(num1, num2)
-                        else:
-                            print("can't divide by zero")
+                        division(num1,num2)
                     except:
                         print("Invalid input please try again")
+
+            case 'p':
+                while not valid:
+                    try:
+                        num1 = float(input("enter a number: "))
+                        num2 = float(input("enter a number: "))
+                        valid = true
+                        power(num1,num2)
+                    except:
+                        print("Invalid input please try again")
+
